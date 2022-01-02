@@ -76,8 +76,6 @@ namespace dotnet_vue_linux
                     //spa.ApplicationBuilder.UseFixSpaPathBaseBugMiddleware();
                     // spa.UseProxyToSpaDevelopmentServer("http://localhost:8080");
                 }
-                //spa.UseProxyToSpaDevelopmentServer("http://127.0.0.1:8080");
-                //spa.UseVueCliServer();
             });
 
             BootStrapConfig();
@@ -85,21 +83,6 @@ namespace dotnet_vue_linux
 
         public async void BootStrapConfig()
         {
-            //var options = new BrowserWindowOptions
-            //{
-            //    Show = true
-            //};
-            //options.WebPreferences.NodeIntegration = false;
-
-            //var mainWindows = await Electron.WindowManager.CreateWindowAsync(options);
-
-            //mainWindows.OnReadyToShow += () =>
-            //{
-            //    mainWindows.Show();
-            //};
-
-            //await Task.Run(() => mainWindows);
-
             await Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
         }
     }
